@@ -2,7 +2,7 @@ import { isOperator } from "./isOperator";
 import { precedence } from "./precedence";
 
 export const infixToPrefix = (infix: string) => {
-    infix = infix.split("").reverse().join("");
+    infix = infix.split("").reverse().join(" ");
     infix = infix.replace(/\(/g, "#");
     infix = infix.replace(/\)/g, "(");
     infix = infix.replace(/\#/g, ")");

@@ -4,6 +4,7 @@ import { precedence } from "./precedence";
 export const infixToPostfix = (infix: string) => {
     let stack: string[] = [];
     let output = [];
+    infix = infix.split("").join(" ")
     let tokens = infix.match(/\S+/g);
     tokens?.map((token) => {
       if (!isOperator(token) && token !== "(" && token !== ")") {
